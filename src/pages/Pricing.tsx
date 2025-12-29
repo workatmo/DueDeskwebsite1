@@ -1,45 +1,82 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function Pricing() {
     return (
-        <div className="container py-24 space-y-12">
-            <div className="text-center space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight">Simple, transparent pricing</h1>
-                <p className="text-xl text-muted-foreground">Choose the plan that's right for you.</p>
+        <div className="container py-24 space-y-12 bg-white">
+            <div className="text-center space-y-4 pt-10">
+                <h1 className="text-4xl md:text-5xl font-black font-heading tracking-tight text-gray-900 uppercase">
+                    Select The Best Plan For Your Needs!
+                </h1>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    Simple, transparent pricing for study hall owners of all sizes.
+                </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
                 {/* Starter Plan */}
                 <PricingCard
-                    title="Starter"
-                    price="$0"
-                    description="Perfect for individuals and hobby projects."
-                    features={["Up to 3 projects", "Community support", "Basic analytics", "1GB storage"]}
+                    title="Starter Plan"
+                    price="₹1,999"
+                    period="/ month"
+                    description="This plan is best for entrepreneurs."
+                    features={[
+                        "QR Code Joinings",
+                        "Automated Reminders",
+                        "Payment Tracking",
+                        "Basic Reports"
+                    ]}
                     buttonText="Get Started"
                     buttonVariant="outline"
                 />
 
-                {/* Pro Plan */}
+                {/* Saver Plan */}
                 <PricingCard
-                    title="Pro"
-                    price="$29"
-                    description="For growing teams and businesses."
-                    features={["Unlimited projects", "Priority support", "Advanced analytics", "20GB storage", "Custom domain"]}
-                    buttonText="Upgrade to Pro"
+                    title="Saver Plan"
+                    price="₹5,499"
+                    period="/ 3 months"
+                    description="Enjoy savings of up to ₹499 with this plan."
+                    features={[
+                        "Everything in Starter",
+                        "3-Month Commitment",
+                        "Priority Support",
+                        "Advanced Analytics"
+                    ]}
+                    buttonText="Get Started"
                     buttonVariant="default"
                     popular
                 />
 
-                {/* Enterprise Plan */}
+                {/* Smart Plan */}
                 <PricingCard
-                    title="Enterprise"
-                    price="Custom"
-                    description="For large organizations with specific needs."
-                    features={["Unlimited everything", "Dedicated success manager", "SSO & Audit logs", "SLA", "On-premise deployment"]}
-                    buttonText="Contact Sales"
+                    title="Smart Plan"
+                    price="₹10,999"
+                    period="/ 6 months"
+                    description="Enjoy savings of up to ₹999 with this plan."
+                    features={[
+                        "Everything in Saver",
+                        "6-Month Commitment",
+                        "Custom Branding",
+                        "Dedicated Account Manager"
+                    ]}
+                    buttonText="Get Started"
+                    buttonVariant="outline"
+                />
+
+                {/* Max Value Plan */}
+                <PricingCard
+                    title="Max Value Plan"
+                    price="₹21,999"
+                    period="/ 12 months"
+                    description="Pay for 11 Months, Enjoy 12 & Get 1 Month Free!"
+                    features={[
+                        "Everything in Smart",
+                        "12-Month Commitment",
+                        "Early Access to Features",
+                        "VIP Training"
+                    ]}
+                    buttonText="Get Started"
                     buttonVariant="outline"
                 />
             </div>
@@ -47,30 +84,37 @@ export default function Pricing() {
     );
 }
 
-function PricingCard({ title, price, description, features, buttonText, buttonVariant, popular }: any) {
+function PricingCard({ title, price, period, description, features, buttonText, buttonVariant, popular }: any) {
     return (
-        <Card className={`flex flex-col ${popular ? 'border-primary shadow-lg scale-105' : ''}`}>
-            <CardHeader>
-                <CardTitle className="text-2xl">{title}</CardTitle>
-                <div className="mt-4 flex items-baseline text-5xl font-extrabold tracking-tight">
-                    {price}
-                    {price !== "Custom" && <span className="text-xl font-normal text-muted-foreground ml-1">/mo</span>}
+        <Card className={`flex flex-col relative ${popular ? 'border-primary shadow-2xl scale-105 z-10' : 'border-gray-200 shadow-lg'} transition-all duration-300 hover:shadow-xl`}>
+            {popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Best Value
                 </div>
-                <CardDescription className="mt-2">{description}</CardDescription>
+            )}
+            <CardHeader className="text-center pt-8">
+                <CardTitle className="text-2xl font-bold text-gray-900">{title}</CardTitle>
+                <div className="mt-4 flex flex-col items-center">
+                    <span className="text-4xl font-black text-primary tracking-tight">{price}</span>
+                    <span className="text-sm font-bold text-gray-500 mt-1 uppercase tracking-wider">{period}</span>
+                </div>
+                <CardDescription className="mt-4 text-gray-600 font-medium">{description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1">
+            <CardContent className="flex-1 px-8 py-6">
                 <ul className="space-y-4">
                     {features.map((feature: string) => (
-                        <li key={feature} className="flex items-center">
-                            <Check className="mr-2 h-4 w-4 text-primary" />
-                            <span className="text-muted-foreground">{feature}</span>
+                        <li key={feature} className="flex items-start">
+                            <Check className="mr-3 h-5 w-5 text-primary shrink-0" />
+                            <span className="text-gray-700 text-sm font-medium">{feature}</span>
                         </li>
                     ))}
                 </ul>
             </CardContent>
-            <CardFooter>
-                <Button className="w-full" variant={buttonVariant} asChild={buttonText === "Contact Sales"}>
-                    {buttonText === "Contact Sales" ? <Link to="/contact">{buttonText}</Link> : buttonText}
+            <CardFooter className="pb-8 px-8">
+                <Button className="w-full font-bold py-6 rounded-xl transition-all duration-300" variant={buttonVariant}>
+                    <a href="https://dash.theduedesk.com/register?merchant=1" target="_blank" rel="noopener noreferrer">
+                        {buttonText}
+                    </a>
                 </Button>
             </CardFooter>
         </Card>

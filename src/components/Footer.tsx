@@ -4,13 +4,13 @@ import footerLogo from "@/assets/images/FooterLogo.png";
 
 export function Footer() {
     return (
-        <footer className="bg-primary text-white pt-8 pb-8">
+        <footer className="bg-primary text-white pt-8 pb-6">
             <div className="container px-4">
                 {/* Top Section: Logo & Downloads */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-6">
                     {/* Brand / Logo */}
                     <div className="flex flex-col items-center md:items-start">
-                        <img src={footerLogo} alt="Duedesk Logo" className="h-56 w-auto" />
+                        <img src={footerLogo} alt="Duedesk Logo" className="h-28 w-auto" />
                     </div>
 
                     {/* Download Buttons */}
@@ -38,7 +38,7 @@ export function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-white/30 my-8"></div>
+                <div className="border-t border-white/30 my-4"></div>
 
                 {/* Bottom Section: Copyright & Links */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base">

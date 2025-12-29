@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bell, CreditCard, Coins, Users, Clock, Rocket, Scissors, Smartphone, Banknote, TrendingUp, Target, Scan, PhoneMissed, Phone, CheckCircle, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Clock, Rocket, Scissors, Smartphone } from "lucide-react";
 import heroBg from "@/assets/images/homesection1.png";
 import missedCallsImg from "@/assets/images/Frustrated&Missedanyjoiningcalls.png";
 import remindersImg from "@/assets/images/Tiredofremainders&follow-Ups.png";

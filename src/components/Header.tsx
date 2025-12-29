@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import headerLogo from "@/assets/images/Headerlogo.png .png";
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,13 +53,16 @@ export function Header() {
             <header className="bg-white rounded-full shadow-2xl w-full max-w-7xl px-6 md:px-10 h-20 flex items-center justify-between transition-all duration-300">
                 {/* Logo */}
                 <div className="flex-shrink-0 flex items-center">
-                    <Link to="/" className="text-3xl font-extrabold font-heading text-primary tracking-tight uppercase">
-                        Dudesk
+                    <Link to="/" className="flex items-center">
+                        <img src={headerLogo} alt="Duedesk" className="h-10 md:h-12 w-auto" />
                     </Link>
                 </div>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-8">
+                    <Link to="/" className="text-base font-semibold text-gray-700 hover:text-primary transition-colors">
+                        Home
+                    </Link>
                     <a
                         href="/#pricing"
                         onClick={(e) => scrollToSection(e, 'pricing')}
@@ -78,7 +82,7 @@ export function Header() {
                 <div className="hidden md:flex items-center space-x-4">
                     <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-full px-6 py-5 text-sm transition-all duration-300">
                         <a href="https://dash.theduedesk.com/register?merchant=1" target="_blank" rel="noopener noreferrer">
-                            Merchant SignUp
+                            Get Started
                         </a>
                     </Button>
                     <Button asChild className="bg-primary hover:bg-primary/90 text-white font-bold rounded-full px-8 py-5 text-sm shadow-lg shadow-primary/30 transition-all duration-300">
@@ -97,10 +101,17 @@ export function Header() {
                     </SheetTrigger>
                     <SheetContent side="top" className="rounded-b-3xl">
                         <div className="flex flex-col gap-6 py-6 items-center">
-                            <Link to="/" className="text-2xl font-extrabold font-heading text-primary uppercase" onClick={() => setIsMobileMenuOpen(false)}>
-                                Dudesk
+                            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+                                <img src={headerLogo} alt="Duedesk" className="h-10 w-auto" />
                             </Link>
                             <nav className="flex flex-col gap-4 text-center">
+                                <Link
+                                    to="/"
+                                    className="text-lg font-semibold text-gray-800 hover:text-primary"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Home
+                                </Link>
                                 <a
                                     href="/#pricing"
                                     onClick={(e) => scrollToSection(e, 'pricing')}
@@ -126,7 +137,7 @@ export function Header() {
                             <div className="flex flex-col gap-3 mt-2 w-full max-w-xs">
                                 <Button asChild variant="outline" className="w-full border-primary text-primary font-bold rounded-full">
                                     <a href="https://dash.theduedesk.com/register?merchant=1" target="_blank" rel="noopener noreferrer">
-                                        Merchant SignUp
+                                        Get Started
                                     </a>
                                 </Button>
                                 <Button asChild className="w-full bg-primary text-white font-bold rounded-full">
