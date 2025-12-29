@@ -1,56 +1,19 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import headerLogo from "@/assets/images/Headerlogo.png .png";
+import headerLogo from "@/assets/images/Headerlogo.png";
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
-    const navigate = useNavigate();
 
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-        e.preventDefault();
 
-        const element = document.getElementById(id);
-
-        if (location.pathname === '/') {
-            // Already on home page, just scroll
-            if (element) {
-                const headerOffset = 100; // Account for fixed header
-                const elementPosition = element.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-        } else {
-            // Not on home page, navigate then scroll
-            navigate('/');
-            // Small timeout to allow navigation to complete
-            setTimeout(() => {
-                const element = document.getElementById(id);
-                if (element) {
-                    const headerOffset = 100;
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
-            }, 100);
-        }
-        setIsMobileMenuOpen(false);
-    };
 
     return (
         <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-            <header className="bg-white rounded-full shadow-2xl w-full max-w-7xl px-6 md:px-10 h-20 flex items-center justify-between transition-all duration-300">
+            <header className="bg-white rounded-full shadow-2xl w-full max-w-5xl px-6 md:px-10 h-20 flex items-center justify-between transition-all duration-300">
                 {/* Logo */}
                 <div className="flex-shrink-0 flex items-center">
                     <Link to="/" className="flex items-center">
@@ -60,20 +23,28 @@ export function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-8">
-                    <Link to="/" className="text-base font-semibold text-gray-700 hover:text-primary transition-colors">
+                    <Link
+                        to="/"
+                        className={`text-base font-semibold transition-colors ${location.pathname === "/" ? "text-primary" : "text-gray-700 hover:text-primary"}`}
+                    >
                         Home
                     </Link>
-                    <a
-                        href="/#pricing"
-                        onClick={(e) => scrollToSection(e, 'pricing')}
-                        className="text-base font-semibold text-gray-700 hover:text-primary transition-colors"
+                    <Link
+                        to="/pricing"
+                        className={`text-base font-semibold transition-colors ${location.pathname === "/pricing" ? "text-primary" : "text-gray-700 hover:text-primary"}`}
                     >
                         Pricing
-                    </a>
-                    <Link to="/about" className="text-base font-semibold text-gray-700 hover:text-primary transition-colors">
+                    </Link>
+                    <Link
+                        to="/about"
+                        className={`text-base font-semibold transition-colors ${location.pathname === "/about" ? "text-primary" : "text-gray-700 hover:text-primary"}`}
+                    >
                         About
                     </Link>
-                    <Link to="/contact" className="text-base font-semibold text-gray-700 hover:text-primary transition-colors">
+                    <Link
+                        to="/contact"
+                        className={`text-base font-semibold transition-colors ${location.pathname === "/contact" ? "text-primary" : "text-gray-700 hover:text-primary"}`}
+                    >
                         Contact Us
                     </Link>
                 </nav>
@@ -107,28 +78,28 @@ export function Header() {
                             <nav className="flex flex-col gap-4 text-center">
                                 <Link
                                     to="/"
-                                    className="text-lg font-semibold text-gray-800 hover:text-primary"
+                                    className={`text-lg font-semibold transition-colors ${location.pathname === "/" ? "text-primary" : "text-gray-800 hover:text-primary"}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Home
                                 </Link>
-                                <a
-                                    href="/#pricing"
-                                    onClick={(e) => scrollToSection(e, 'pricing')}
-                                    className="text-lg font-semibold text-gray-800 hover:text-primary"
+                                <Link
+                                    to="/pricing"
+                                    className={`text-lg font-semibold transition-colors ${location.pathname === "/pricing" ? "text-primary" : "text-gray-800 hover:text-primary"}`}
+                                    onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Pricing
-                                </a>
+                                </Link>
                                 <Link
                                     to="/about"
-                                    className="text-lg font-semibold text-gray-800 hover:text-primary"
+                                    className={`text-lg font-semibold transition-colors ${location.pathname === "/about" ? "text-primary" : "text-gray-800 hover:text-primary"}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     About
                                 </Link>
                                 <Link
                                     to="/contact"
-                                    className="text-lg font-semibold text-gray-800 hover:text-primary"
+                                    className={`text-lg font-semibold transition-colors ${location.pathname === "/contact" ? "text-primary" : "text-gray-800 hover:text-primary"}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Contact Us

@@ -7,14 +7,14 @@ export default function Pricing() {
         <div className="container py-24 space-y-12 bg-white">
             <div className="text-center space-y-4 pt-10">
                 <h1 className="text-4xl md:text-5xl font-black font-heading tracking-tight text-gray-900 uppercase">
-                    Select The Best Plan For Your Needs!
+                    Zero Setup Charges. Zero Commission. <br />Choose the Plan That Fits You.
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                     Simple, transparent pricing for study hall owners of all sizes.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-8">
                 {/* Starter Plan */}
                 <PricingCard
                     title="Starter Plan"
@@ -86,9 +86,9 @@ export default function Pricing() {
 
 function PricingCard({ title, price, period, description, features, buttonText, buttonVariant, popular }: any) {
     return (
-        <Card className={`flex flex-col relative ${popular ? 'border-primary shadow-2xl scale-105 z-10' : 'border-gray-200 shadow-lg'} transition-all duration-300 hover:shadow-xl`}>
+        <Card className={`flex flex-col relative ${popular ? 'border-primary shadow-2xl scale-110 z-10 shadow-primary/20' : 'border-gray-200 shadow-lg scale-90 opacity-90'} transition-all duration-300 hover:shadow-xl`}>
             {popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
                     Best Value
                 </div>
             )}

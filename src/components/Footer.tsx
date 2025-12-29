@@ -50,10 +50,10 @@ export function Footer() {
                         <Link to="/terms" className="text-white/90 hover:text-white hover:underline transition-colors">
                             Terms
                         </Link>
-                        <Link to="#" className="text-white/90 hover:text-white hover:underline transition-colors">
+                        <Link to="/privacy" className="text-white/90 hover:text-white hover:underline transition-colors">
                             Privacy Policy
                         </Link>
-                        <Link to="#" className="text-white/90 hover:text-white hover:underline transition-colors">
+                        <Link to="/refund" className="text-white/90 hover:text-white hover:underline transition-colors">
                             Refund & Cancellation
                         </Link>
 

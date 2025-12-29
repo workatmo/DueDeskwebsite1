@@ -25,7 +25,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-black/40"></div>
                 </div>
 
-                <div className="container relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4 pt-20">
+                <div className="container relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-8 pt-20">
                     <h1 className="text-5xl md:text-7xl lg:text-9xl font-black font-heading tracking-tighter leading-none uppercase drop-shadow-2xl mb-4">
                         Digital <span className="text-white">Incharge</span>
                     </h1>
@@ -34,13 +34,11 @@ export default function Home() {
                         No More Chasing Behind Payments – We Do It For You
                     </p>
 
-                    <p className="text-lg md:text-xl text-gray-100 max-w-4xl mx-auto leading-relaxed mb-6 font-medium">
+                    <p className="text-lg md:text-xl text-gray-100 max-w-4xl mx-auto leading-relaxed mb-12 font-medium">
                         Instant cabin bookings with real-time vacancies—no manual tracking, no missed payments. Our smart reminders and dedicated calling team ensure timely collections, while you manage cabins effortlessly. Enjoy smooth, transparent shifting, vacate, and refund processes. Streamline your StudyHall operations with DueDesk.
                     </p>
 
-                    <h3 className="text-2xl md:text-4xl font-extrabold font-heading mb-12 drop-shadow-lg">
-                        Be Our Merchant & Enjoy 3 Months Free Trial.
-                    </h3>
+
 
                     <div className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-2xl">
                         <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold text-xl px-12 py-7 rounded-full uppercase tracking-wider transition-all duration-300 min-w-[200px]">
@@ -61,11 +59,11 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Why Choose Dudesk Section */}
+            {/* Why Choose Duedesk Section */}
             <section className="min-h-screen flex items-center justify-center py-20 bg-primary snap-start snap-always">
-                <div className="container px-4 text-center">
+                <div className="container max-w-5xl px-8 text-center uppercase">
                     <h2 className="text-3xl md:text-5xl font-black font-heading text-white uppercase tracking-tight mb-16 drop-shadow-md">
-                        Why To Choose Dudesk?
+                        Why To Choose Duedesk?
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
@@ -122,7 +120,7 @@ export default function Home() {
 
             {/* Frustrated & Missed Calls Section */}
             <section className="min-h-screen flex items-center bg-white snap-start snap-always overflow-hidden relative">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 p-6">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 px-8 py-6">
                     {/* Left: Text Content */}
                     <div className="space-y-8 max-w-3xl">
                         <h2 className="text-4xl md:text-6xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
@@ -143,22 +141,19 @@ export default function Home() {
                                 <img
                                     src={missedCallsImg}
                                     alt="Missed Calls Illustration"
-                                    className="w-full max-w-xl object-contain drop-shadow-2xl"
+                                    className="w-full max-w-3xl object-contain drop-shadow-2xl"
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Background Decor */}
-                <div className="absolute top-20 left-10 opacity-10">
-                    <div className="h-64 w-64 border-4 border-primary rounded-full border-dashed animate-spin-slow"></div>
-                </div>
+
             </section>
 
             {/* Tired of Remainders Section */}
             <section className="min-h-screen flex items-center bg-white snap-start snap-always relative overflow-hidden">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 p-6">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 px-8 py-6">
                     {/* Left: Support Agent Image & Overlays */}
                     <div className="relative flex justify-center items-center order-2 md:order-1">
                         {/* Floating Icons - Removed */}
@@ -168,7 +163,7 @@ export default function Home() {
                             <img
                                 src={remindersImg}
                                 alt="Reminders Illustration"
-                                className="w-full max-w-xl object-contain drop-shadow-2xl"
+                                className="w-full max-w-3xl object-contain drop-shadow-2xl"
                             />
                         </div>
                     </div>
@@ -187,7 +182,7 @@ export default function Home() {
 
             {/* Payments Section */}
             <section className="min-h-screen flex items-center bg-white snap-start snap-always relative overflow-hidden">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 p-6">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 px-8 py-6">
                     {/* Left: Text Content */}
                     <div className="space-y-8 max-w-3xl">
                         <h2 className="text-4xl md:text-6xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
@@ -207,7 +202,7 @@ export default function Home() {
                             <img
                                 src={paymentsImg}
                                 alt="Payments Illustration"
-                                className="w-full max-w-xl object-contain drop-shadow-2xl"
+                                className="w-full max-w-3xl object-contain drop-shadow-2xl"
                             />
                         </div>
                     </div>
@@ -215,8 +210,8 @@ export default function Home() {
             </section>
 
             {/* Vacating & Refunds Section */}
-            <section className="min-h-screen flex items-center bg-gray-50 snap-start snap-always relative overflow-hidden">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 p-6">
+            <section className="min-h-screen flex items-center bg-white snap-start snap-always relative overflow-hidden">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 px-8 py-6">
                     {/* Left: Student Image & Overlays */}
                     <div className="relative flex justify-center items-center order-2 md:order-1">
                         {/* Falling Money Icons - Removed */}
@@ -224,7 +219,7 @@ export default function Home() {
                         {/* Process Pills Overlay - Removed */}
 
                         {/* Main Image */}
-                        <div className="relative z-10 w-full max-w-2xl">
+                        <div className="relative z-10 w-full max-w-3xl">
                             <img
                                 src={vacatingImg}
                                 alt="Vacating Illustration"
@@ -236,7 +231,7 @@ export default function Home() {
                     {/* Right: Text Content */}
                     <div className="space-y-8 max-w-3xl order-1 md:order-2">
                         <h2 className="text-4xl md:text-5xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Tired of messy vacating <br /><span className="text-primary">and refund disputes?</span>
+                            Tired of messy vacating <br /><span className="text-primary">& refund disputes?</span>
                         </h2>
                         <p className="text-xl text-gray-600 font-medium leading-relaxed">
                             With DueDesk, vacating is transparent and tracked with instant updates. Late vacates auto-forfeit refunds, reducing disputes, while approved refunds reach the student’s UPI within 24 hours.
@@ -247,11 +242,11 @@ export default function Home() {
 
             {/* Cash Handling Section */}
             <section className="min-h-screen flex items-center bg-white snap-start snap-always relative overflow-hidden">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 p-6">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 px-8 py-6">
                     {/* Left: Text Content */}
                     <div className="space-y-8 max-w-3xl order-1">
                         <h2 className="text-4xl md:text-5xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Tired of handling cash <br /><span className="text-primary">every month?</span>
+                            Still handling cash payments <br /><span className="text-primary">every month?</span>
                         </h2>
                         <p className="text-xl text-gray-600 font-medium leading-relaxed">
                             With DueDesk, go fully digital — secure payments, instant receipts, and guaranteed settlements to your bank within 24 hours. No more cash chaos!
@@ -267,7 +262,7 @@ export default function Home() {
                             <img
                                 src={cashImg}
                                 alt="Cash Handling Illustration"
-                                className="w-full max-w-xl object-contain drop-shadow-2xl"
+                                className="w-full max-w-3xl object-contain drop-shadow-2xl"
                             />
                         </div>
                     </div>
@@ -276,14 +271,14 @@ export default function Home() {
 
             {/* Retention Section (Coupons & Loyalty) */}
             <section className="min-h-screen flex items-center bg-white snap-start snap-always relative overflow-hidden">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 p-6">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 px-8 py-6">
                     {/* Left: Custom Coupons Visuals */}
                     <div className="relative flex flex-col items-center justify-center space-y-8 order-2 md:order-1">
 
                         {/* Falling Money Decoration - Removed */}
 
                         {/* Coupon Image */}
-                        <div className="relative w-full max-w-xl z-10 hover:scale-105 transition-transform duration-500">
+                        <div className="relative w-full max-w-3xl z-10 hover:scale-105 transition-transform duration-500">
                             <img
                                 src={retentionImg}
                                 alt="Retention Strategies"
@@ -317,7 +312,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-black/20"></div>
                 </div>
 
-                <div className="container relative z-10 p-6 flex flex-col items-start justify-center h-full">
+                <div className="container relative z-10 px-8 py-6 flex flex-col items-start justify-center h-full leading-tight">
                     <div className="space-y-8 max-w-2xl text-white text-left">
                         <h2 className="text-4xl md:text-6xl font-black font-heading leading-tight drop-shadow-lg">
                             Be Our Merchant & <br />Enjoy 3 Months <br />Free Trial.
@@ -345,7 +340,7 @@ export default function Home() {
                     {/* Heading */}
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-black font-heading text-white tracking-wide uppercase leading-tight drop-shadow-md">
-                            Select The Best Plan <br />For Your Needs!
+                            Zero Setup Charges. Zero Commission. <br />Choose the Plan That Fits You.
                         </h2>
                     </div>
 
@@ -353,7 +348,7 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
                         {/* Starter Plan */}
-                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300 gap-6">
+                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-all duration-300 gap-6 scale-95 opacity-90 origin-right">
                             <div className="space-y-2 text-center md:text-left">
                                 <h3 className="text-2xl font-bold text-gray-800">Starter Plan</h3>
                                 <p className="text-sm text-gray-500 max-w-[200px] leading-relaxed">
@@ -367,7 +362,10 @@ export default function Home() {
                         </div>
 
                         {/* Saver Plan */}
-                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300 gap-6">
+                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-2xl hover:shadow-primary/20 transition-all duration-300 gap-6 border-2 border-primary relative scale-110 z-10 shadow-primary/20 origin-left">
+                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+                                Most Popular
+                            </div>
                             <div className="space-y-2 text-center md:text-left">
                                 <h3 className="text-2xl font-bold text-gray-800">Saver Plan</h3>
                                 <p className="text-sm text-gray-500 max-w-[200px] leading-relaxed">
@@ -381,7 +379,7 @@ export default function Home() {
                         </div>
 
                         {/* Smart Plan */}
-                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300 gap-6">
+                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-all duration-300 gap-6 scale-95 opacity-90 origin-right">
                             <div className="space-y-2 text-center md:text-left">
                                 <h3 className="text-2xl font-bold text-gray-800">Smart Plan</h3>
                                 <p className="text-sm text-gray-500 max-w-[200px] leading-relaxed">
@@ -395,7 +393,7 @@ export default function Home() {
                         </div>
 
                         {/* Max Value Plan */}
-                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300 gap-6">
+                        <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between shadow-xl hover:shadow-2xl transition-all duration-300 gap-6 scale-95 opacity-90 origin-left">
                             <div className="space-y-2 text-center md:text-left">
                                 <h3 className="text-2xl font-bold text-gray-800">Max Value Plan</h3>
                                 <p className="text-sm text-gray-500 max-w-[200px] leading-relaxed">
@@ -543,7 +541,7 @@ export default function Home() {
 
             {/* FAQ Section */}
             <section className="min-h-[70vh] flex items-center bg-white snap-start snap-always py-20 border-t border-gray-100">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div className="container max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start px-8">
                     {/* Left: Heading & Intro */}
                     <div className="space-y-6">
                         <h2 className="text-4xl md:text-5xl font-black font-heading text-black tracking-tight">
@@ -552,9 +550,6 @@ export default function Home() {
                         <p className="text-lg text-gray-600 leading-relaxed max-w-md">
                             Delve into our FAQ section to get quick answers to common questions about our services.
                         </p>
-                        <Button variant="outline" className="rounded-full border-blue-500 text-blue-500 hover:bg-blue-50 hover:text-blue-600 px-8 py-6 text-lg font-bold transition-colors">
-                            Contact Us
-                        </Button>
                     </div>
 
                     {/* Right: Accordion Questions */}
