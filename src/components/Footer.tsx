@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import footerLogo from "@/assets/images/FooterLogo.png";
 
 export function Footer() {
     return (
-        <footer className="bg-primary text-white pt-16 pb-8">
+        <footer className="bg-primary text-white pt-8 pb-8">
             <div className="container px-4">
                 {/* Top Section: Logo & Downloads */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
                     {/* Brand / Logo */}
                     <div className="flex flex-col items-center md:items-start">
-                        <h2 className="text-4xl font-extrabold tracking-tight text-white mb-0">Duedesk</h2>
-                        <p className="text-sm font-handwriting italic text-white/90 -mt-1 ml-1" style={{ fontFamily: "cursive" }}>
-                            Digital Incharge
-                        </p>
+                        <img src={footerLogo} alt="Duedesk Logo" className="h-56 w-auto" />
                     </div>
 
                     {/* Download Buttons */}
@@ -49,7 +47,7 @@ export function Footer() {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-8 items-center">
-                        <Link to="#" className="text-white/90 hover:text-white hover:underline transition-colors">
+                        <Link to="/terms" className="text-white/90 hover:text-white hover:underline transition-colors">
                             Terms
                         </Link>
                         <Link to="#" className="text-white/90 hover:text-white hover:underline transition-colors">

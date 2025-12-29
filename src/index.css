@@ -75,7 +75,7 @@
   }
 
   html {
-    scroll-snap-type: y mandatory;
+    /* removed scroll-snap-type to fix footer visibility issue */
   }
 
   html.lenis,
