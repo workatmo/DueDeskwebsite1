@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { EnquiryModal } from "@/components/EnquiryModal";
 import { Button } from "@/components/ui/button";
 import { Clock, Rocket, Scissors, Smartphone } from "lucide-react";
 import heroBg from "@/assets/images/homesection1.png";
@@ -41,9 +43,11 @@ export default function Home() {
 
 
                     <div className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-2xl">
-                        <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold text-xl px-12 py-7 rounded-full uppercase tracking-wider transition-all duration-300 min-w-[200px]">
-                            Demo
-                        </Button>
+                        <EnquiryModal>
+                            <Button className="relative z-50 bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold text-xl px-12 py-7 rounded-full uppercase tracking-wider transition-all duration-300 min-w-[200px]">
+                                Demo
+                            </Button>
+                        </EnquiryModal>
                         <Button asChild className="bg-primary hover:bg-primary/90 text-white font-bold text-xl px-12 py-7 rounded-full uppercase tracking-wider shadow-xl transition-all duration-300 min-w-[240px] flex items-center gap-3">
                             <a href="https://dash.theduedesk.com/register?merchant=1" target="_blank" rel="noopener noreferrer">
                                 Join Now
@@ -124,7 +128,7 @@ export default function Home() {
                     {/* Left: Text Content */}
                     <div className="space-y-8 max-w-3xl">
                         <h2 className="text-4xl md:text-6xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Frustrated & Missed any <span className="text-primary">joining calls?</span>
+                            Frustrated & Missed any <br /><span className="text-primary">joining calls?</span>
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed">
                             With DueDesk, students can check seat availability and book cabins instantly through the QRcode—so you never lose a joining again.
@@ -321,9 +325,11 @@ export default function Home() {
                             Become a DueDesk merchant today and enjoy 3 months free! Streamline your cabin bookings, payments, and operations with our hassle-free platform. Start now and see the difference!
                         </p>
                         <div className="flex flex-wrap gap-6 pt-8">
-                            <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent text-xl px-10 py-7 rounded-full font-bold uppercase tracking-wider transition-all backdrop-blur-sm">
-                                Demo
-                            </Button>
+                            <EnquiryModal>
+                                <Button variant="outline" className="relative z-50 border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent text-xl px-10 py-7 rounded-full font-bold uppercase tracking-wider transition-all backdrop-blur-sm">
+                                    Demo
+                                </Button>
+                            </EnquiryModal>
                             <Button asChild className="bg-black text-white hover:bg-gray-900 border-2 border-transparent text-xl px-10 py-7 rounded-full font-bold uppercase tracking-wider shadow-xl transition-transform hover:scale-105">
                                 <a href="https://dash.theduedesk.com/register?merchant=1" target="_blank" rel="noopener noreferrer">
                                     Join Now

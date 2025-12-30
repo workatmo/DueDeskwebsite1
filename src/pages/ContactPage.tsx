@@ -12,24 +12,26 @@ export default function Contact() {
                     </p>
                 </section>
 
-                <section className="space-y-4">
+                <section className="space-y-6">
                     <div>
-                        <p className="text-xl font-bold text-gray-900">Operational Address:</p>
-                        <p>Above HDFC Bank, Gandhinagar, Hyderabad, Telangana, India</p>
+                        <span className="font-bold text-gray-900 block mb-1">Operational Address:</span>
+                        <span className="block text-gray-800">
+                            Above HDFC Bank, Gandhinagar, Hyderabad, Telangana, India
+                        </span>
                     </div>
 
                     <div>
-                        <p className="text-xl font-bold text-gray-900 inline">Telephone: </p>
-                        <p className="inline">+91 8985847945</p>
+                        <span className="font-bold text-gray-900">Telephone: </span>
+                        <span className="text-gray-800">+91 8985847945</span>
                     </div>
 
                     <div>
-                        <p className="text-xl font-bold text-gray-900 inline">Email: </p>
-                        <p className="inline text-primary">support@theduedesk.com</p>
+                        <span className="font-bold text-gray-900">Email: </span>
+                        <span className="text-gray-800">support@theduedesk.com</span>
                     </div>
                 </section>
 
-                <section className="pt-8 border-t italic text-gray-600">
+                <section>
                     <p>
                         We’re here to help you with any queries regarding your payments, account access, or platform-related assistance. Our team will get back to you at the earliest possible time.
                     </p>
