@@ -128,7 +128,7 @@ export default function Home() {
                     {/* Left: Text Content */}
                     <div className="space-y-8 max-w-3xl">
                         <h2 className="text-4xl md:text-6xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Frustrated & Missed any <br /><span className="text-primary">joining calls?</span>
+                            Frustrated&nbsp;with <br /><span className="text-primary">joining calls?</span>
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed">
                             With DueDesk, students can check seat availability and book cabins instantly through the QRcode—so you never lose a joining again.
@@ -190,7 +190,7 @@ export default function Home() {
                     {/* Left: Text Content */}
                     <div className="space-y-8 max-w-3xl">
                         <h2 className="text-4xl md:text-6xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Trouble confirming <br /><span className="text-primary">payments received?</span>
+                            Trouble confirming <br /><span className="text-primary">payments?</span>
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed">
                             With DueDesk, every transaction is tracked in real-time with instant notifications & daily settlements — so you never waste time reconfirming payments.
@@ -235,7 +235,7 @@ export default function Home() {
                     {/* Right: Text Content */}
                     <div className="space-y-8 max-w-3xl order-1 md:order-2">
                         <h2 className="text-4xl md:text-5xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Tired of messy vacating <br /><span className="text-primary">& refund disputes?</span>
+                            Tired of messy vacatings <br /><span className="text-primary">and refunds?</span>
                         </h2>
                         <p className="text-xl text-gray-600 font-medium leading-relaxed">
                             With DueDesk, vacating is transparent and tracked with instant updates. Late vacates auto-forfeit refunds, reducing disputes, while approved refunds reach the student’s UPI within 24 hours.
@@ -294,7 +294,7 @@ export default function Home() {
                     {/* Right: Text Content */}
                     <div className="space-y-8 max-w-3xl order-1 md:order-2">
                         <h2 className="text-4xl md:text-5xl font-black font-heading text-gray-950 leading-[1.1] tracking-tight">
-                            Finding it hard to attract & <br /><span className="text-primary">retain students?</span>
+                            Finding it hard to <br />attract <span className="text-primary">Students?</span>
                         </h2>
                         <p className="text-xl text-gray-600 font-medium leading-relaxed">
                             DueDesk boosts loyalty with coupons, referral rewards, and limited-time offers that push students to pay on time.
